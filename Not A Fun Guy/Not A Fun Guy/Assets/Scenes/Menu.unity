@@ -184,7 +184,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.5058824, g: 0.40000004, b: 0.17254902, a: 0.11764706}
+    m_NormalColor: {r: 0.27058825, g: 0.4392157, b: 0.3019608, a: 0.627451}
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 0}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -404,7 +404,7 @@ MonoBehaviour:
     m_SelectOnRight: {fileID: 0}
   m_Transition: 1
   m_Colors:
-    m_NormalColor: {r: 0.5058824, g: 0.40000004, b: 0.17254902, a: 0.11764706}
+    m_NormalColor: {r: 0.27058825, g: 0.4392157, b: 0.3019608, a: 0.627451}
     m_HighlightedColor: {r: 0.6117647, g: 0.6313726, b: 0.73333335, a: 0}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -5204,9 +5204,9 @@ RectTransform:
   m_Father: {fileID: 1278627753}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.7576515}
-  m_AnchorMax: {x: 0.5, y: 0.7576515}
-  m_AnchoredPosition: {x: -1, y: 2}
+  m_AnchorMin: {x: 0.5, y: 0.07943435}
+  m_AnchorMax: {x: 0.5, y: 0.07943435}
+  m_AnchoredPosition: {x: 0, y: -2.7099915}
   m_SizeDelta: {x: 512.1, y: 107.600006}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1164177749
@@ -5403,7 +5403,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0.105882354, g: 0.18039216, b: 0.14509805, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -5591,7 +5591,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 0.105882354, g: 0.18039216, b: 0.14509805, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -5677,7 +5677,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 0fa6d992c48984287aa2a3bbe3249c93, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2f20d2e0f8c7b49239fbb1bea6388f48, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
