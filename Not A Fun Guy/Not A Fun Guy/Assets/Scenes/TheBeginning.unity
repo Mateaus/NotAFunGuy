@@ -199,6 +199,11 @@ PrefabInstance:
       propertyPath: orthographic size
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 5012054727022630696, guid: 7aee29a2b977d644aae33d0f8b7042a1,
+        type: 3}
+      propertyPath: m_JumpForce
+      value: 60
+      objectReference: {fileID: 0}
     - target: {fileID: 5012054727038673962, guid: 7aee29a2b977d644aae33d0f8b7042a1,
         type: 3}
       propertyPath: m_Material
@@ -213,11 +218,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_GravityScale
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5012054727022630696, guid: 7aee29a2b977d644aae33d0f8b7042a1,
-        type: 3}
-      propertyPath: m_JumpForce
-      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 5012054727022630698, guid: 7aee29a2b977d644aae33d0f8b7042a1,
         type: 3}
