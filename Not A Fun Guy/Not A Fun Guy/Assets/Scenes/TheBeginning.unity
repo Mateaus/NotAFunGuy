@@ -132,7 +132,7 @@ PrefabInstance:
     - target: {fileID: 5012054727033863912, guid: 7aee29a2b977d644aae33d0f8b7042a1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.12
+      value: 1.66
       objectReference: {fileID: 0}
     - target: {fileID: 5012054727033863912, guid: 7aee29a2b977d644aae33d0f8b7042a1,
         type: 3}
@@ -189,6 +189,27 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 5012054727021484266, guid: 7aee29a2b977d644aae33d0f8b7042a1,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8fb98a6035269e64a998f9b56828fc4f,
+        type: 3}
+    - target: {fileID: 5012054727021484266, guid: 7aee29a2b977d644aae33d0f8b7042a1,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 1.375
+      objectReference: {fileID: 0}
+    - target: {fileID: 5012054727021484266, guid: 7aee29a2b977d644aae33d0f8b7042a1,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1.375
+      objectReference: {fileID: 0}
+    - target: {fileID: 5012054727021484266, guid: 7aee29a2b977d644aae33d0f8b7042a1,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8240275148793100606, guid: 7aee29a2b977d644aae33d0f8b7042a1,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -199,33 +220,145 @@ PrefabInstance:
       propertyPath: orthographic size
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 5012054727038382154, guid: 7aee29a2b977d644aae33d0f8b7042a1,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.375
+      objectReference: {fileID: 0}
+    - target: {fileID: 5012054727038382154, guid: 7aee29a2b977d644aae33d0f8b7042a1,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.375
+      objectReference: {fileID: 0}
+    - target: {fileID: 5012054727038382154, guid: 7aee29a2b977d644aae33d0f8b7042a1,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 1.375
+      objectReference: {fileID: 0}
+    - target: {fileID: 5012054727038382154, guid: 7aee29a2b977d644aae33d0f8b7042a1,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 1.375
+      objectReference: {fileID: 0}
     - target: {fileID: 5012054727022630696, guid: 7aee29a2b977d644aae33d0f8b7042a1,
         type: 3}
       propertyPath: m_JumpForce
       value: 60
       objectReference: {fileID: 0}
-    - target: {fileID: 5012054727038673962, guid: 7aee29a2b977d644aae33d0f8b7042a1,
+    - target: {fileID: 5012054727022630696, guid: 7aee29a2b977d644aae33d0f8b7042a1,
         type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 6200000, guid: 3626fe8e008014f6bbd19bb72937b311, type: 2}
-    - target: {fileID: 5012054727037415210, guid: 7aee29a2b977d644aae33d0f8b7042a1,
-        type: 3}
-      propertyPath: m_Mass
-      value: 0.1
+      propertyPath: m_WhatIsGround.m_Bits
+      value: 4294967295
       objectReference: {fileID: 0}
-    - target: {fileID: 5012054727037415210, guid: 7aee29a2b977d644aae33d0f8b7042a1,
+    - target: {fileID: 5012054727022630696, guid: 7aee29a2b977d644aae33d0f8b7042a1,
         type: 3}
-      propertyPath: m_GravityScale
-      value: 3
+      propertyPath: m_AirControl
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 5012054727022630698, guid: 7aee29a2b977d644aae33d0f8b7042a1,
-        type: 3}
-      propertyPath: character
-      value: 
-      objectReference: {fileID: 114534265}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7aee29a2b977d644aae33d0f8b7042a1, type: 3}
+--- !u!1 &6658642 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5012054727033889480, guid: 7aee29a2b977d644aae33d0f8b7042a1,
+    type: 3}
+  m_PrefabInstance: {fileID: 6658641}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &6658643
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6658642}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 6bc170bc531648b469c10bf4451026f6, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.75
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &18791895
 GameObject:
   m_ObjectHideFlags: 0
