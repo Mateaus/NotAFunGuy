@@ -255,6 +255,21 @@ PrefabInstance:
       propertyPath: m_AirControl
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5012054727037415210, guid: 7aee29a2b977d644aae33d0f8b7042a1,
+        type: 3}
+      propertyPath: m_Mass
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5012054727037415210, guid: 7aee29a2b977d644aae33d0f8b7042a1,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 3626fe8e008014f6bbd19bb72937b311, type: 2}
+    - target: {fileID: 5012054727022630698, guid: 7aee29a2b977d644aae33d0f8b7042a1,
+        type: 3}
+      propertyPath: character
+      value: 
+      objectReference: {fileID: 6658642}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7aee29a2b977d644aae33d0f8b7042a1, type: 3}
 --- !u!1 &6658642 stripped
@@ -596,12 +611,6 @@ Transform:
   m_Father: {fileID: 1113853474}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &114534265 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5012054727033889480, guid: 7aee29a2b977d644aae33d0f8b7042a1,
-    type: 3}
-  m_PrefabInstance: {fileID: 6658641}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &181677975
 GameObject:
   m_ObjectHideFlags: 0
