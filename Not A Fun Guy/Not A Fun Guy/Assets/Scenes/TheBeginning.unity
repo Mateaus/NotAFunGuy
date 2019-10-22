@@ -255,16 +255,32 @@ PrefabInstance:
       propertyPath: m_AirControl
       value: 1
       objectReference: {fileID: 0}
+<<<<<<< HEAD
+=======
+    - target: {fileID: 5012054727037415210, guid: 7aee29a2b977d644aae33d0f8b7042a1,
+        type: 3}
+      propertyPath: m_Mass
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5012054727037415210, guid: 7aee29a2b977d644aae33d0f8b7042a1,
+        type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 3626fe8e008014f6bbd19bb72937b311, type: 2}
+>>>>>>> 11987e3836995b11db86c9e55e86d7f92ef267b2
     - target: {fileID: 5012054727022630698, guid: 7aee29a2b977d644aae33d0f8b7042a1,
         type: 3}
       propertyPath: character
       value: 
       objectReference: {fileID: 6658642}
+<<<<<<< HEAD
     - target: {fileID: 5012054727026626826, guid: 7aee29a2b977d644aae33d0f8b7042a1,
         type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 763f8213c1924fc4795405f8993865bc, type: 2}
+=======
+>>>>>>> 11987e3836995b11db86c9e55e86d7f92ef267b2
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7aee29a2b977d644aae33d0f8b7042a1, type: 3}
 --- !u!1 &6658642 stripped
