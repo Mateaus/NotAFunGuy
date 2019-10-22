@@ -9,7 +9,6 @@ namespace UnityStandardAssets._2D
     {
         private PlatformerCharacter2D m_Character;
         private bool m_Jump;
-        public GameObject character;
 
 
         private void Awake()
@@ -35,11 +34,11 @@ namespace UnityStandardAssets._2D
             float h = CrossPlatformInputManager.GetAxis("Horizontal");
             if (h == 0)
             {
-                character.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
+                m_Character.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
             }
             else
             {
-                character.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
+                m_Character.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
                // character.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
             }
             
