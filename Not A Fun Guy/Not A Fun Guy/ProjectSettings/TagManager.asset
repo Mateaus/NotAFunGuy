@@ -42,12 +42,21 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Background
+  - name: FirstLayer
     uniqueID: 2200118533
     locked: 0
-  - name: MidGround
+  - name: SecondLayer
     uniqueID: 2431608513
     locked: 0
-  - name: ForeGround
+  - name: ThirdLayer
     uniqueID: 2863971615
+    locked: 0
+  - name: FourthLayer
+    uniqueID: 991350081
+    locked: 0
+  - name: FifthLayer
+    uniqueID: 1122097317
+    locked: 0
+  - name: SixthLayer
+    uniqueID: 311453225
     locked: 0
