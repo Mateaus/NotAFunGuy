@@ -122,17 +122,17 @@ PrefabInstance:
     - target: {fileID: 5012054727033889480, guid: 7aee29a2b977d644aae33d0f8b7042a1,
         type: 3}
       propertyPath: m_Name
-      value: CharacterRobotBoy
+      value: Hero
       objectReference: {fileID: 0}
     - target: {fileID: 5012054727033863912, guid: 7aee29a2b977d644aae33d0f8b7042a1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.49
+      value: 10.55
       objectReference: {fileID: 0}
     - target: {fileID: 5012054727033863912, guid: 7aee29a2b977d644aae33d0f8b7042a1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.66
+      value: 1.1
       objectReference: {fileID: 0}
     - target: {fileID: 5012054727033863912, guid: 7aee29a2b977d644aae33d0f8b7042a1,
         type: 3}
@@ -193,7 +193,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 8fb98a6035269e64a998f9b56828fc4f,
+      objectReference: {fileID: 21300000, guid: 22518be059a8d264d9186fd2a22f46de,
         type: 3}
     - target: {fileID: 5012054727021484266, guid: 7aee29a2b977d644aae33d0f8b7042a1,
         type: 3}
@@ -264,12 +264,17 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Material
       value: 
-      objectReference: {fileID: 6200000, guid: 0cb77231a430b454fb792ff7ffcc3943, type: 2}
+      objectReference: {fileID: 6200000, guid: 3626fe8e008014f6bbd19bb72937b311, type: 2}
     - target: {fileID: 5012054727022630698, guid: 7aee29a2b977d644aae33d0f8b7042a1,
         type: 3}
       propertyPath: character
       value: 
       objectReference: {fileID: 6658642}
+    - target: {fileID: 5012054727026626826, guid: 7aee29a2b977d644aae33d0f8b7042a1,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 763f8213c1924fc4795405f8993865bc, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7aee29a2b977d644aae33d0f8b7042a1, type: 3}
 --- !u!1 &6658642 stripped
