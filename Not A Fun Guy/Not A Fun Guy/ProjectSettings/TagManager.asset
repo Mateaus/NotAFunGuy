@@ -60,3 +60,6 @@ TagManager:
   - name: SixthLayer
     uniqueID: 311453225
     locked: 0
+  - name: SeventhLayer
+    uniqueID: 921741035
+    locked: 0
