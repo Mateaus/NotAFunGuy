@@ -18,7 +18,7 @@ public class HeroAttack : MonoBehaviour
         if (Input.GetButtonDown("Fire1") && canAttack)
         {
             canAttack = false;
-            GetComponent<Animator>().SetTrigger("Attack");
+            GetComponent<Animator>().SetInteger("Attack", 1);
             StartCoroutine(attackCool());
         }
     }
