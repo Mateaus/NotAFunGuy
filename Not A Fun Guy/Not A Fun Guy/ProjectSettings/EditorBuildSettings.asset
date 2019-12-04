@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/TheBeginning.unity
+    guid: f82c30a7abdc6814fb1342fcf054e8aa
+  - enabled: 1
+    path: Assets/Scenes/Forest.unity
+    guid: d083810a50599254aafd5e27bc124632
+  - enabled: 1
+    path: Assets/Scenes/BossRoom.unity
+    guid: bd56632deaaa1c64bb8527e939e0af51
   m_configObjects: {}
