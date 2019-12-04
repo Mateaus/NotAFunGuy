@@ -11,7 +11,6 @@ namespace UnityStandardAssets._2D
         private int xMin, xMax;
         private PlatformerCharacter2D m_Character;
         private bool m_Jump;
-        public GameObject character;
 
         //flags for checking if character is at levelBounds
         bool atLeftBound = false;
@@ -43,11 +42,11 @@ namespace UnityStandardAssets._2D
             float h = CrossPlatformInputManager.GetAxis("Horizontal");
             if (h == 0)
             {
-                character.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
+                m_Character.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
             }
             else
             {
-                character.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
+                m_Character.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
                // character.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
             }
 
@@ -84,11 +83,11 @@ namespace UnityStandardAssets._2D
             {
                 if (h < 0 && m_Character.transform.position.x < xMin)
                 {
-                    character.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
+                    //character.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
                 }
                 else
                 {
-                    character.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
+                    //character.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
                     // character.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
                 }
             }
@@ -97,11 +96,11 @@ namespace UnityStandardAssets._2D
             {
                 if (h > 0 && m_Character.transform.position.x > xMax)
                 {
-                    character.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
+                    //character.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
                 }
                 else
                 {
-                    character.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
+                    //character.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
                     // character.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
                 }
             }
