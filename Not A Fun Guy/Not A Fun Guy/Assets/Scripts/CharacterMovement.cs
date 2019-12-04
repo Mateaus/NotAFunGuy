@@ -11,6 +11,15 @@ public class CharacterMovement : MonoBehaviour
     private bool isJumping = false;
     private bool isCrouching = false;
 
+    private AudioSource walk;
+    private bool playing = false;
+
+
+    private void Awake()
+    {
+        walk = GetComponents<AudioSource>()[1];
+    }
+
     private void Update()
     {
         horizontalMovement = Input.GetAxisRaw("Horizontal") * characterSpeed;
@@ -47,6 +56,23 @@ public class CharacterMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (System.Math.Abs(horizontalMovement) > 0)
+        {
+            if (!playing)
+            {
+                playing = true;
+                walk.Play();
+            }if (!CharacterController2D.m_Grounded)
+            {
+                playing = false;
+                walk.Stop();
+            }
+        }
+        else
+        {
+            playing = false;
+            walk.Stop();
+        }
         controller.Move(horizontalMovement * Time.fixedDeltaTime, isCrouching, isJumping);
         isJumping = false;
     }
