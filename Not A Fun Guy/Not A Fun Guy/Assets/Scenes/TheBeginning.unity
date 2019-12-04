@@ -31706,7 +31706,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1727166124}
   xMin: 3
-  xMax: 105.6
+  xMax: 103
   yMin: 3.8
   yMax: 50
 --- !u!1 &1933604366
