@@ -25,6 +25,10 @@ public class HeroAttack : MonoBehaviour
             GetComponent<Animator>().SetInteger("Attack", 1);
             StartCoroutine(attackCool());
         }
+        else
+        {
+            GetComponent<Animator>().SetInteger("Attack", 0);
+        }
     }
 
     IEnumerator attackCool()
