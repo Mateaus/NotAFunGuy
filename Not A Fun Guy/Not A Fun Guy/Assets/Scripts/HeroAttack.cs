@@ -22,7 +22,7 @@ public class HeroAttack : MonoBehaviour
         {
             source.PlayOneShot(attack);
             canAttack = false;
-            GetComponent<Animator>().SetTrigger("Attack");
+            GetComponent<Animator>().SetInteger("Attack", 1);
             StartCoroutine(attackCool());
         }
     }
