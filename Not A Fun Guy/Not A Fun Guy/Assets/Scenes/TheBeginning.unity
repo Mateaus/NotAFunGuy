@@ -31893,7 +31893,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1843711439}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10.55, y: 2.532459, z: -1}
+  m_LocalPosition: {x: 10.55, y: 0.2, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1133070791}
@@ -31913,8 +31913,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1727166124}
-  xMin: 3
-  xMax: 103
+  xMin: 6.5
+  xMax: 101
   yMin: 3.8
   yMax: 50
 --- !u!1 &1933604366
@@ -32289,6 +32289,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hero
       objectReference: {fileID: 0}
+    - target: {fileID: 7379578942245770116, guid: b564a74dadc714649a19c847a64f5132,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 7379578942250737254, guid: b564a74dadc714649a19c847a64f5132,
         type: 3}
       propertyPath: m_GravityScale
@@ -32423,6 +32428,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7379578942245770114, guid: b564a74dadc714649a19c847a64f5132,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7379578942245770118, guid: b564a74dadc714649a19c847a64f5132,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8505265502531199546, guid: b564a74dadc714649a19c847a64f5132, type: 3}
