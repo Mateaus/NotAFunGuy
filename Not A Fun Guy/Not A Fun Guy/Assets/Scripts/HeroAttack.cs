@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class HeroAttack : MonoBehaviour
 {
-    bool canAttack;
+    private bool canAttack;
+    private AudioSource source;
+    public AudioClip attack;
 
     // Start is called before the first frame update
     void Start()
     {
+        source = gameObject.GetComponents<AudioSource>()[0];
         canAttack = true;
     }
 
@@ -17,6 +20,7 @@ public class HeroAttack : MonoBehaviour
     {
         if (Input.GetButtonDown("Fire1") && canAttack)
         {
+            source.PlayOneShot(attack);
             canAttack = false;
             GetComponent<Animator>().SetTrigger("Attack");
             StartCoroutine(attackCool());
