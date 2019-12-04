@@ -7,8 +7,16 @@ namespace UnityStandardAssets._2D
     [RequireComponent(typeof (PlatformerCharacter2D))]
     public class Platformer2DUserControl : MonoBehaviour
     {
+        [SerializeField]
+        private int xMin, xMax;
         private PlatformerCharacter2D m_Character;
         private bool m_Jump;
+
+        //flags for checking if character is at levelBounds
+        bool atLeftBound = false;
+        bool atRightBound = false;
+
+        //public int xmin,xmax;
 
 
         private void Awake()
@@ -41,11 +49,61 @@ namespace UnityStandardAssets._2D
                 m_Character.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
                // character.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
             }
-            
+
 
             // Pass all parameters to the character control script.
-            m_Character.Move(h, crouch, m_Jump);
-            m_Jump = false;
+           
+            
+
+                m_Character.Move(h, crouch, m_Jump);
+                m_Jump = false;
+
+
+            if (m_Character.transform.position.x > xMax)
+            {
+                atRightBound = true;
+            }
+            else
+            {
+                atRightBound = false;
+            }
+
+
+            if (m_Character.transform.position.x < xMin)
+            {
+                //transform.position = new Vector3(xMin, transform.position.y, transform.position.z);
+                atLeftBound = true;
+                
+            }
+            else
+            {
+                atLeftBound = false;
+            }
+            if (atLeftBound)
+            {
+                if (h < 0 && m_Character.transform.position.x < xMin)
+                {
+                    //character.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
+                }
+                else
+                {
+                    //character.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
+                    // character.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
+                }
+            }
+
+            if (atRightBound)
+            {
+                if (h > 0 && m_Character.transform.position.x > xMax)
+                {
+                    //character.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
+                }
+                else
+                {
+                    //character.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
+                    // character.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
+                }
+            }
         }
     }
 }
