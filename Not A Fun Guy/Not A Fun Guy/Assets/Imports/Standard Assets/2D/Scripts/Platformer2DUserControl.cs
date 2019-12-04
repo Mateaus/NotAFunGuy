@@ -1,16 +1,20 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
 namespace UnityStandardAssets._2D
 {
-    [RequireComponent(typeof (PlatformerCharacter2D))]
+    [RequireComponent(typeof(PlatformerCharacter2D))]
+
     public class Platformer2DUserControl : MonoBehaviour
     {
         [SerializeField]
         private int xMin, xMax;
         private PlatformerCharacter2D m_Character;
+        private bool playing;
         private bool m_Jump;
+        private AudioSource walk;
 
         //flags for checking if character is at levelBounds
         bool atLeftBound = false;
@@ -21,6 +25,7 @@ namespace UnityStandardAssets._2D
 
         private void Awake()
         {
+            walk = gameObject.GetComponents<AudioSource>()[1];
             m_Character = GetComponent<PlatformerCharacter2D>();
         }
 
@@ -42,10 +47,25 @@ namespace UnityStandardAssets._2D
             float h = CrossPlatformInputManager.GetAxis("Horizontal");
             if (h == 0)
             {
+                if (playing)
+                {
+                    walk.Stop();
+                    playing = false;
+                }
                 m_Character.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezeRotation;
             }
             else
             {
+                if (!playing && PlatformerCharacter2D.m_Grounded)
+                {
+                    walk.Play();
+                    playing = true;
+                }
+                else if (!PlatformerCharacter2D.m_Grounded)
+                {
+                    walk.Stop();
+                    playing = false;
+                }
                 m_Character.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
                // character.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
             }
