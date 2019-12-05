@@ -115,10 +115,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2284417324506184413}
-  - component: {fileID: 2284417324506184410}
   - component: {fileID: 2284417324506184408}
   - component: {fileID: 2284417324506184409}
-  - component: {fileID: 3299752880087814919}
+  - component: {fileID: 3051125369462777956}
   m_Layer: 0
   m_Name: MovingPlatform
   m_TagString: Untagged
@@ -141,25 +140,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &2284417324506184410
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2284417324506184412}
-  m_Enabled: 0
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b3e49e6d1d2582b429d36c38000b4899, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!61 &2284417324506184408
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -201,7 +181,7 @@ MonoBehaviour:
   useTriggerAsSensor: 0
   rigidbodies: []
   lastPosition: {x: 40, y: -11.35, z: 0}
---- !u!114 &3299752880087814919
+--- !u!114 &3051125369462777956
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -210,12 +190,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2284417324506184412}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b27af3c8881eab42b7ddeadca37382f, type: 3}
+  m_Script: {fileID: 11500000, guid: e92bafafa3570294285fef286a72fbb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wayPoints:
-  - {fileID: 0}
-  - {fileID: 0}
+  delta: 1.5
+  speed: 2
+  isHorizontal: 1
 --- !u!1 &2284417325117532901
 GameObject:
   m_ObjectHideFlags: 0
