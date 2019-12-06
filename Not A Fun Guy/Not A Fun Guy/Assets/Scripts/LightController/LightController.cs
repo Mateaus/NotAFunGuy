@@ -16,7 +16,7 @@ public class LightController : MonoBehaviour
 
         if (transform.eulerAngles.x > 60.0f)
         {
-            if (light.range <= 25)
+            if (light.range <= 20)
             {
                 light.range += 7 * Time.deltaTime;
             }
