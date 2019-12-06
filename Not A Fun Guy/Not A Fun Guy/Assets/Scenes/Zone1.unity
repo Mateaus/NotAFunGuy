@@ -31915,7 +31915,7 @@ MonoBehaviour:
   player: {fileID: 1727166124}
   xMin: 6.5
   xMax: 101
-  yMin: 3.8
+  yMin: -5
   yMax: 50
 --- !u!1 &1933604366
 GameObject:
