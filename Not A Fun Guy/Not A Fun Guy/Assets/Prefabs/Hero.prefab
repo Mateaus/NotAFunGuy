@@ -247,6 +247,7 @@ MonoBehaviour:
   attack: {fileID: 8300000, guid: e5ed12d97d8b96e4bb43b1a7d0694fad, type: 3}
   hit: {fileID: 1215580651292800110}
   knockScale: 400
+  strength: 25
 --- !u!114 &6213265793701916036
 MonoBehaviour:
   m_ObjectHideFlags: 0

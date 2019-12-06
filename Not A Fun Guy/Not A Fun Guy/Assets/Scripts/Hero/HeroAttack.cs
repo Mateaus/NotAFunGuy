@@ -9,6 +9,7 @@ public class HeroAttack : MonoBehaviour
     public AudioClip attack;
     public GameObject hit;
     public float knockScale;
+    public int strength;
 
     // Start is called before the first frame update
     void Start()
@@ -37,6 +38,7 @@ public class HeroAttack : MonoBehaviour
 
     public void damage(GameObject other)
     {
+        other.GetComponent<EnemyHealth>().damage(strength);
         if (other.transform.position.x > transform.position.x)
         {
             Vector2 knock = new Vector2(1, 1);
