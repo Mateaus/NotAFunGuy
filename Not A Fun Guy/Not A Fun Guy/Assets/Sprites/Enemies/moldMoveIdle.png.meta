@@ -1,14 +1,14 @@
 fileFormatVersion: 2
-guid: 3324fc6c7574c4792926a38bcd382def
+guid: adec37a8d91234cc0bf621e05bb5b77d
 TextureImporter:
   fileIDToRecycleName:
-    21300000: sporeEnemy_0
-    21300002: sporeEnemy_1
-    21300004: sporeEnemy_2
-    21300006: sporeEnemy_3
-    21300008: sporeEnemy_4
-    21300010: sporeEnemy_5
-    21300012: sporeEnemy_6
+    21300000: moldMoveIdle_0
+    21300002: moldMoveIdle_1
+    21300004: moldMoveIdle_2
+    21300006: moldMoveIdle_3
+    21300008: moldMoveIdle_4
+    21300010: moldMoveIdle_5
+    21300012: moldMoveIdle_6
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -52,7 +52,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 25
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -102,13 +102,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sporeEnemy_0
+      name: moldMoveIdle_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 5
         width: 34
-        height: 39
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -116,19 +116,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9bcfe84444187442c8bb9547d66d0c32
+      spriteID: d93739113a8eb4a3cafb7238bd563519
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sporeEnemy_1
+      name: moldMoveIdle_1
       rect:
         serializedVersion: 2
         x: 34
-        y: 0
+        y: 5
         width: 34
-        height: 39
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -136,19 +136,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 84eda6df077cb4714968961d491fb1ad
+      spriteID: 82a9b82304a974831b64b696801c7b26
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sporeEnemy_2
+      name: moldMoveIdle_2
       rect:
         serializedVersion: 2
         x: 68
-        y: 0
+        y: 5
         width: 34
-        height: 39
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,19 +156,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 99856f2b058e04cdc885eb7d379110d6
+      spriteID: c8f03f1c4f05f4c40bd78471cb16ac85
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sporeEnemy_3
+      name: moldMoveIdle_3
       rect:
         serializedVersion: 2
         x: 102
-        y: 0
+        y: 5
         width: 34
-        height: 39
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -176,19 +176,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1f166dcf1c7024871b412d0be6b272db
+      spriteID: b185270c67bb741e2ba2e43d4a0a5b8f
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sporeEnemy_4
+      name: moldMoveIdle_4
       rect:
         serializedVersion: 2
         x: 136
-        y: 0
+        y: 5
         width: 34
-        height: 39
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -196,19 +196,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 56939a067f19b43d188037e1b73b205f
+      spriteID: 58082c2e52a414eb1861be1c2e8b41c2
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sporeEnemy_5
+      name: moldMoveIdle_5
       rect:
         serializedVersion: 2
         x: 170
-        y: 0
+        y: 5
         width: 34
-        height: 39
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,19 +216,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f6522ea96dac546e9b536147e3703871
+      spriteID: 52c55c3bdcae247299048590792761df
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: sporeEnemy_6
+      name: moldMoveIdle_6
       rect:
         serializedVersion: 2
         x: 204
-        y: 0
+        y: 5
         width: 34
-        height: 39
+        height: 34
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -236,7 +236,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 89a69f61f2d73456a9e99c1d405d4cbb
+      spriteID: 049f7a642ee8444a5ae37fc8ca757e62
       vertices: []
       indices: 
       edges: []
@@ -244,7 +244,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 39cef33ce74ce425f9330a118110c0f7
+    spriteID: 88f902ade5fb64ac4bd9606badb51bf5
     vertices: []
     indices: 
     edges: []
