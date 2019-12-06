@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3571732125149628759}
   - component: {fileID: 1678021686159712215}
   - component: {fileID: 1678021686159712232}
+  - component: {fileID: 1318467802926555868}
   m_Layer: 0
   m_Name: Spore
   m_TagString: Enemy
@@ -32,8 +33,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 9.99, y: -1.2, z: 0.024787672}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 749980377748752777}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -160,39 +160,22 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3687876480199524978}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a8fd7ce89a5f4f7982da4c3ef6df868, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_MovementSmoothing: 0.05
---- !u!1 &8345647825439367795
-GameObject:
+--- !u!114 &1318467802926555868
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 749980377748752777}
-  m_Layer: 0
-  m_Name: floorCheck
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &749980377748752777
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8345647825439367795}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.680003, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4914787791464869879}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_GameObject: {fileID: 3687876480199524978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23c8bc5dbf7ff794bbedc83313258f00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 50
