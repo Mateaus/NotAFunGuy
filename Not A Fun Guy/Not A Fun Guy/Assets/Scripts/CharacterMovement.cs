@@ -27,7 +27,7 @@ public class CharacterMovement : MonoBehaviour
         // Handles animation based on if the character is moving or not.
         animator.SetFloat("Speed", Mathf.Abs(horizontalMovement));
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetButtonDown("Jump"))
         {
             isJumping = true;
             // Activates jumping animation
