@@ -4,7 +4,15 @@ using UnityEngine.SceneManagement;
 using UnityEngine;
 public class GUIHandler : MonoBehaviour
 {
+    public GameObject panelObject;
+    public GameObject sporesEffect;
+    public string sceneName;
+    private Animator transitionAnim;
     bool notEnded = true;
+
+    private void Start() {
+        transitionAnim = panelObject.GetComponent<Animator>();
+    }
 
     /* for when we want the game to end we can load
      * game over scene with button that leads back to
@@ -27,7 +35,21 @@ public class GUIHandler : MonoBehaviour
     // Redirects user to game scene to play
     public void start()
     {
-        SceneManager.LoadScene("Zone1");
+        panelObject.SetActive(true);
+        StartCoroutine(LoadScene());
+    }
+
+    IEnumerator LoadScene()
+    {
+        transitionAnim.SetTrigger("end");
+
+        //TODO: Instead of instantly setting the spores effect
+        //      when the Start button is pressed, it would be
+        //      better if the particles fade away alongside
+        //      the screen. For now, this works for the transition.
+        sporesEffect.SetActive(false);
+        yield return new WaitForSeconds(1.5f);
+        SceneManager.LoadScene(sceneName);
     }
 
     // Quits the application for the user
