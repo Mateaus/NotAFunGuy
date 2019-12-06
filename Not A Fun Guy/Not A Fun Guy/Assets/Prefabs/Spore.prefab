@@ -181,3 +181,4 @@ MonoBehaviour:
   health: 50
   AttackUp: {fileID: 4373286844588436652, guid: c9e810f29f950df469fa3a4e7c3da6ec,
     type: 3}
+  Shield: {fileID: 4172851405633507968, guid: c29b4a56ce3e1304085e3ab036d052c1, type: 3}
