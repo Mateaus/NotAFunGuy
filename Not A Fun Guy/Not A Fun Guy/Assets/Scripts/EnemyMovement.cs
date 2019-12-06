@@ -61,12 +61,22 @@ public class EnemyMovement : MonoBehaviour
         }
         else if (distanceBetween < stop)
         {
+            // Move the character by finding the target velocity
+            Vector3 targetVelocity = new Vector2(0 * speed, m_Rigidbody2D.velocity.y);
+            // And then smoothing it out and applying it to the character
+            m_Rigidbody2D.velocity = Vector3.SmoothDamp(m_Rigidbody2D.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
+
             //Play attack animation
             attack = true;
             move = false;
         }
         else
         {
+            // Move the character by finding the target velocity
+            Vector3 targetVelocity = new Vector2(0 * speed, m_Rigidbody2D.velocity.y);
+            // And then smoothing it out and applying it to the character
+            m_Rigidbody2D.velocity = Vector3.SmoothDamp(m_Rigidbody2D.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
+
             attack = false;
             move = false;
         }
