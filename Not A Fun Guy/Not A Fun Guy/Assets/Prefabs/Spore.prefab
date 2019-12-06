@@ -135,7 +135,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -0.2}
@@ -165,10 +165,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a8fd7ce89a5f4f7982da4c3ef6df868, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_WhatIsGround:
-    serializedVersion: 2
-    m_Bits: 515
-  m_GroundCheck: {fileID: 749980377748752777}
+  m_MovementSmoothing: 0.05
 --- !u!1 &8345647825439367795
 GameObject:
   m_ObjectHideFlags: 0
