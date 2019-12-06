@@ -6,6 +6,8 @@ public class CharacterMovement : MonoBehaviour
 {
     public CharacterController2D controller;
     public Animator animator;
+    [HideInInspector]
+    public bool isInTransition = false;
     public float characterSpeed = 35.0f;
     private float horizontalMovement = 0.0f;
     private bool isJumping = false;
@@ -22,8 +24,15 @@ public class CharacterMovement : MonoBehaviour
 
     private void Update()
     {
-        horizontalMovement = Input.GetAxisRaw("Horizontal") * characterSpeed;
-
+        if (!isInTransition)
+        {
+            horizontalMovement = Input.GetAxisRaw("Horizontal") * characterSpeed;
+        } 
+        else 
+        {
+            horizontalMovement = 2.0f * characterSpeed;
+        }
+        
         // Handles animation based on if the character is moving or not.
         animator.SetFloat("Speed", Mathf.Abs(horizontalMovement));
 
@@ -62,7 +71,8 @@ public class CharacterMovement : MonoBehaviour
             {
                 playing = true;
                 walk.Play();
-            }if (!CharacterController2D.m_Grounded)
+            }
+            if (!CharacterController2D.m_Grounded)
             {
                 playing = false;
                 walk.Stop();
@@ -73,6 +83,7 @@ public class CharacterMovement : MonoBehaviour
             playing = false;
             walk.Stop();
         }
+
         controller.Move(horizontalMovement * Time.fixedDeltaTime, isCrouching, isJumping);
         isJumping = false;
     }

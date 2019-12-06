@@ -12,14 +12,18 @@ public class SceneTransition : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            StartCoroutine(LoadScene());
+            CharacterMovement playerMovement = other.GetComponent<CharacterMovement>();
+            playerMovement.isInTransition = true;
+            StartCoroutine(LoadScene(playerMovement));
         }
     }
 
-    IEnumerator LoadScene()
+    IEnumerator LoadScene(CharacterMovement playerMovement)
     {
         transitionAnim.SetTrigger("end");
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(1.0f);
+        playerMovement.characterSpeed = 0.0f;
+        yield return new WaitForSeconds(0.5f);
         SceneManager.LoadScene(sceneName);
     }
 }
