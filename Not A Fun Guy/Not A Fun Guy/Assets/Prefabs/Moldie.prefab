@@ -142,6 +142,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 100
+  AttackUp: {fileID: 4373286844588436652, guid: c9e810f29f950df469fa3a4e7c3da6ec,
+    type: 3}
 --- !u!50 &150933000478408683
 Rigidbody2D:
   serializedVersion: 4
