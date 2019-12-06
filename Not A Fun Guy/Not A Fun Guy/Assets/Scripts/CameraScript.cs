@@ -31,7 +31,7 @@ public class CameraScript : MonoBehaviour
     private void LateUpdate()
     {
         float x = Mathf.Clamp(player.transform.position.x, xMin, xMax);
-        float y = Mathf.Clamp(player.transform.position.y, yMin + (player.transform.position.y - initialPlayerYAxis), yMax);
+        float y = Mathf.Clamp(player.transform.position.y, yMin/* + (player.transform.position.y - initialPlayerYAxis)*/, yMax);
 
         Vector3 currentPosition = new Vector3(x, y, gameObject.transform.position.z);
         transform.position = currentPosition;

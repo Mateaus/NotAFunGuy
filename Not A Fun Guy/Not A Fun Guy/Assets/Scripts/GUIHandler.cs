@@ -27,7 +27,7 @@ public class GUIHandler : MonoBehaviour
     // Redirects user to game scene to play
     public void start()
     {
-        SceneManager.LoadScene("TheBeginning");
+        SceneManager.LoadScene("Zone1");
     }
 
     // Quits the application for the user

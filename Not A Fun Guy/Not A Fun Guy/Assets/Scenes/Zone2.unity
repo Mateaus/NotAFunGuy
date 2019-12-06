@@ -41913,8 +41913,8 @@ MonoBehaviour:
   player: {fileID: 443495458}
   xMin: 3
   xMax: 115
-  yMin: 2
-  yMax: 0
+  yMin: -25
+  yMax: 10
 --- !u!1 &873357670
 GameObject:
   m_ObjectHideFlags: 0
