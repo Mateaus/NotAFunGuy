@@ -43,13 +43,19 @@ public class HeroAttack : MonoBehaviour
         {
             Vector2 knock = new Vector2(1, 1);
             other.GetComponent<Rigidbody2D>().AddForce(knock * knockScale);
-            StartCoroutine(EnemyStun(other));
+            if (other.GetComponent<EnemyHealth>().health != 0)
+            {
+                StartCoroutine(EnemyStun(other));
+            }
         }
         if (other.transform.position.x < transform.position.x)
         {
             Vector2 knock = new Vector2(-1, 1);
             other.GetComponent<Rigidbody2D>().AddForce(knock * knockScale);
-            StartCoroutine(EnemyStun(other));
+            if (other.GetComponent<EnemyHealth>().health != 0)
+            {
+                StartCoroutine(EnemyStun(other));
+            }
         }
     }
 
