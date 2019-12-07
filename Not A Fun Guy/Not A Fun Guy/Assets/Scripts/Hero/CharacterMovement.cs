@@ -30,7 +30,7 @@ public class CharacterMovement : MonoBehaviour
         } 
         else 
         {
-            horizontalMovement = 2.0f * characterSpeed;
+            horizontalMovement = 1.0f * characterSpeed;
         }
         
         // Handles animation based on if the character is moving or not.

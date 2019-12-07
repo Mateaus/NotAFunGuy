@@ -18,7 +18,7 @@ public class LightController : MonoBehaviour
         {
             if (light.range <= 20)
             {
-                light.range += 7 * Time.deltaTime;
+                light.range += 10 * Time.deltaTime;
             }
         }
         else
