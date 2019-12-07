@@ -7,6 +7,7 @@ public class EnemyHealth : MonoBehaviour
     public int health;
     public GameObject AttackUp;
     public GameObject Shield;
+    public GameObject Invuln;
 
     // Start is called before the first frame update
     void Start()
@@ -31,15 +32,21 @@ public class EnemyHealth : MonoBehaviour
     public void die()
     {
         int rand = Random.Range(0, 100);
-        if (rand < 50)
+        if (rand < 10)
         {
-            GameObject inst = Instantiate(AttackUp, transform);
+            GameObject inst = Instantiate(Invuln, transform);
             inst.transform.parent = null;
             inst.transform.position += new Vector3(0, 0.1f, 0);
         }
-        else
+        else if (rand < 50)
         {
             GameObject inst = Instantiate(Shield, transform);
+            inst.transform.parent = null;
+            inst.transform.position += new Vector3(0, 0.1f, 0);
+        }
+        else if (rand < 90)
+        {
+            GameObject inst = Instantiate(AttackUp, transform);
             inst.transform.parent = null;
             inst.transform.position += new Vector3(0, 0.1f, 0);
         }

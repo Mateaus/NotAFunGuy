@@ -8,6 +8,9 @@ TagManager:
   - Ground
   - Enemy
   - Buff
+  - AttackUp
+  - Shield
+  - Invuln
   layers:
   - Default
   - TransparentFX

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 1678021686159712215}
   - component: {fileID: 1678021686159712232}
   - component: {fileID: 1318467802926555868}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Spore
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -182,3 +182,4 @@ MonoBehaviour:
   AttackUp: {fileID: 4373286844588436652, guid: c9e810f29f950df469fa3a4e7c3da6ec,
     type: 3}
   Shield: {fileID: 4172851405633507968, guid: c29b4a56ce3e1304085e3ab036d052c1, type: 3}
+  Invuln: {fileID: 8114450186059953711, guid: f1c0c65d4bb60bc4b94e2e39a203e73e, type: 3}
