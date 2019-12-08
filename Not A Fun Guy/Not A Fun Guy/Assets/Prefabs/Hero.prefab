@@ -250,6 +250,8 @@ MonoBehaviour:
   knockScale: 400
   strength: 25
   buff: 0
+  atkEffect: {fileID: 6683618846143924843, guid: 6004207c53ef8d94f8c9a5e01b987ca8,
+    type: 3}
 --- !u!114 &6213265793701916036
 MonoBehaviour:
   m_ObjectHideFlags: 0
