@@ -10,6 +10,8 @@ public class HeroAttack : MonoBehaviour
     public GameObject hit;
     public float knockScale;
     public int strength;
+    public static bool attUp = false;
+    public bool buff = false;
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +35,12 @@ public class HeroAttack : MonoBehaviour
         {
             hit.SetActive(false);
             GetComponent<Animator>().SetBool("Attack", false);
+        }
+        if (attUp && !buff)
+        {
+            attUp = false;
+            buff = true;
+            StartCoroutine("AttackUp");
         }
     }
 
@@ -70,5 +78,13 @@ public class HeroAttack : MonoBehaviour
     {
         yield return new WaitForSeconds(0.2f);
         canAttack = true;
+    }
+
+    IEnumerator AttackUp()
+    {
+        strength = strength * 2;
+        yield return new WaitForSeconds(10f);
+        strength = strength / 2;
+        buff = false;
     }
 }

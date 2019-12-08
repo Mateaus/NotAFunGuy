@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class hit : MonoBehaviour
 {
-    public HeroAttack attack;
+    private HeroAttack attack;
     // Start is called before the first frame update
     void Start()
     {
