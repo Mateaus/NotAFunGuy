@@ -12,6 +12,7 @@ public class HeroAttack : MonoBehaviour
     public int strength;
     public static bool attUp = false;
     public bool buff = false;
+    public GameObject atkEffect;
 
     // Start is called before the first frame update
     void Start()
@@ -82,9 +83,11 @@ public class HeroAttack : MonoBehaviour
 
     IEnumerator AttackUp()
     {
+        GameObject sparkle = Instantiate(atkEffect, transform);
         strength = strength * 2;
         yield return new WaitForSeconds(10f);
         strength = strength / 2;
         buff = false;
+        Destroy(sparkle);
     }
 }
