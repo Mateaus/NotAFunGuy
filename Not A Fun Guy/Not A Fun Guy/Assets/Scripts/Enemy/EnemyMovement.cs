@@ -14,7 +14,7 @@ public class EnemyMovement : MonoBehaviour
 
     Animator a;
     float speed = 2f;
-    float stop = 0.8f;
+    float stop = 1.5f;
 
     void Awake()
     {
