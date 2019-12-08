@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2494822970691230099}
   - component: {fileID: 150933000478408683}
   - component: {fileID: 4905050459451578442}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Moldie
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -145,6 +145,7 @@ MonoBehaviour:
   AttackUp: {fileID: 4373286844588436652, guid: c9e810f29f950df469fa3a4e7c3da6ec,
     type: 3}
   Shield: {fileID: 4172851405633507968, guid: c29b4a56ce3e1304085e3ab036d052c1, type: 3}
+  Invuln: {fileID: 8114450186059953711, guid: f1c0c65d4bb60bc4b94e2e39a203e73e, type: 3}
 --- !u!50 &150933000478408683
 Rigidbody2D:
   serializedVersion: 4
