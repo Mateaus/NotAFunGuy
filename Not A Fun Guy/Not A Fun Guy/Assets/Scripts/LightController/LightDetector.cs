@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class LightDetector : MonoBehaviour
 {
-    //public Light light;
+    public Light smallLightSource;
     public Transform globalLightSource;
     public bool isDark = false;
     public float xRotation;
     private Vector2 previousPosition = Vector2.zero;
     private bool hasEntered = false;
-    private bool isReentering = false;
+    private bool enteredFromLeft = false;
 
     private void Start()
     {
@@ -26,9 +26,17 @@ public class LightDetector : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-
             GameObject playerGO = other.gameObject;
             previousPosition = playerGO.transform.position;
+
+            if (previousPosition.x < transform.position.x)
+            {
+                enteredFromLeft = true;
+            }
+            else if (previousPosition.x > transform.position.x)
+            {
+                enteredFromLeft = false;
+            }
 
             if (isBright())
             {
@@ -59,7 +67,6 @@ public class LightDetector : MonoBehaviour
             {
                 isDark = true;
             }
-
         }
     }
 
@@ -71,43 +78,40 @@ public class LightDetector : MonoBehaviour
             float lightXAngle = globalLightSource.eulerAngles.x;
             float playerXPosition = playerGO.transform.position.x;
 
-            if (isBright())
+            if (isDark)
             {
-                Debug.Log("light not dark");
-                globalLightSource.eulerAngles =
-                new Vector3(Mathf.Clamp(lightXAngle + (playerXPosition - previousPosition.x) * 10, 0, 70), 0, 0);
-            }
-            else
-            {
-                if (isDark)
+                if (enteredFromLeft)
                 {
-                    Debug.Log("Dark");
                     globalLightSource.eulerAngles =
-                    new Vector3(Mathf.Clamp(lightXAngle + (playerXPosition - previousPosition.x) * 10, 0, 70), 0, 0);
+                        new Vector3(Mathf.Clamp(lightXAngle - (playerXPosition - previousPosition.x) * 10, 0, 70), 0, 0);
                 }
                 else
                 {
-                    Debug.Log("not dark");
                     globalLightSource.eulerAngles =
-                    new Vector3(Mathf.Clamp(lightXAngle - (playerXPosition - previousPosition.x) * 10, 0, 70), 0, 0);
+                        new Vector3(Mathf.Clamp(lightXAngle + (playerXPosition - previousPosition.x) * 10, 0, 70), 0, 0);
+                }
+            }
+            else
+            {
+                if (enteredFromLeft)
+                {
+                    globalLightSource.eulerAngles =
+                        new Vector3(Mathf.Clamp(lightXAngle + (playerXPosition - previousPosition.x) * 10, 0, 70), 0, 0);
+                }
+                else
+                {
+                    globalLightSource.eulerAngles =
+                        new Vector3(Mathf.Clamp(lightXAngle - (playerXPosition - previousPosition.x) * 10, 0, 70), 0, 0);
                 }
             }
 
+            smallLightSource.range = Mathf.Clamp((lightXAngle / 5), 0, 14);
             previousPosition = playerGO.transform.position;
         }
     }
 
     private bool isBright()
     {
-        if (globalLightSource.eulerAngles.x <= 0.1f)
-        {
-            isDark = false;
-            return true;
-        }
-        else
-        {
-            isDark = true;
-            return false;
-        }
+        return globalLightSource.eulerAngles.x <= 30.0f;
     }
 }
