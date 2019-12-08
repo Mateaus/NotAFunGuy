@@ -70,7 +70,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aff6eea613ae2244ebb62bf5be6487fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attack: {fileID: 0}
 --- !u!1 &7379578942245770114
 GameObject:
   m_ObjectHideFlags: 0
@@ -121,6 +120,7 @@ GameObject:
   - component: {fileID: 2587285872909955406}
   - component: {fileID: 4189849666214484578}
   - component: {fileID: 8278120347736316034}
+  - component: {fileID: 1654535307000260236}
   m_Layer: 9
   m_Name: Hero
   m_TagString: Player
@@ -249,6 +249,7 @@ MonoBehaviour:
   hit: {fileID: 1215580651292800110}
   knockScale: 400
   strength: 25
+  buff: 0
 --- !u!114 &6213265793701916036
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -554,6 +555,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d71ae34a187888a4e9f1505a1e58b603, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1654535307000260236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7379578942245770116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc132896266484f418d4952aebd53860, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 3
 --- !u!1 &7379578942245770118
 GameObject:
   m_ObjectHideFlags: 0
