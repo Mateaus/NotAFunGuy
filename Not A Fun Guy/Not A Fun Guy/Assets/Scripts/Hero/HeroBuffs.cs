@@ -31,11 +31,13 @@ public class HeroBuffs : MonoBehaviour
         else if (other.gameObject.tag.Equals("Shield"))
         {
             Destroy(other.gameObject);
+            PlayerHealth.shield = true;
             Debug.Log("Shield");
         }
         else if (other.gameObject.tag.Equals("Invuln"))
         {
             Destroy(other.gameObject);
+            PlayerHealth.invuln = true;
             Debug.Log("Invuln");
         }
     }
