@@ -25,6 +25,7 @@ public class HeroBuffs : MonoBehaviour
         if (other.gameObject.tag.Equals("AttackUp"))
         {
             Destroy(other.gameObject);
+            HeroAttack.attUp = true;
             Debug.Log("AttackUp");
         }
         else if (other.gameObject.tag.Equals("Shield"))
