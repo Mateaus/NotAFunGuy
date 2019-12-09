@@ -53,6 +53,12 @@ public class CharacterMovement : MonoBehaviour
         }
     }
 
+    public void death()
+    {
+        controller.Move(0, false, false);
+        Destroy(this);
+    }
+
     /**
     * OnLanding method gets called when the character
     * hits the ground after having previously jump.
