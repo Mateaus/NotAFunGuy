@@ -13,8 +13,9 @@ public class hit : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Enemy")
+        if (other.CompareTag("Enemy"))
         {
+            Debug.Log("Hit enemy");
             //You will need a function on your parent object that applies damage to enemies you will want to pass the enemy to the parent so damage can be applied
             attack.damage(other.gameObject);
         }
