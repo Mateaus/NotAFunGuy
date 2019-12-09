@@ -19,7 +19,7 @@ public class PlayerHealth : MonoBehaviour
     }
 
     private void Update() {
-        Debug.Log("Hero HP: " + health);
+        //Debug.Log("Hero HP: " + health);
         if (shield)
         {
             shieldSprite.enabled = true;
@@ -28,10 +28,24 @@ public class PlayerHealth : MonoBehaviour
         {
             shieldSprite.enabled = false;
         }
+
+        if (invuln && !active)
+        {
+            active = true;
+            StartCoroutine("Inv");
+        }
+        if(health <= 0)
+        {
+            Debug.Log("Dead");
+        }
     }
 
     public void TakeDamage(int damage) 
     {
+        if (invuln)
+        {
+            return;
+        }
         if (shield)
         {
             shield = false;
@@ -43,20 +57,11 @@ public class PlayerHealth : MonoBehaviour
         {
             healthBar.fillAmount = health / currentHealth;
         }
-
-        if (health <= 0)
-        {
-            OnDeath();
-        }
     }
 
     private void OnDeath()
     {
-        if (invuln && !active)
-        {
-            active = true;
-            StartCoroutine("Inv");
-        }
+        
     }
 
     IEnumerator Inv()
@@ -64,6 +69,7 @@ public class PlayerHealth : MonoBehaviour
         GameObject sparkle = Instantiate(invEffect, transform);
         yield return new WaitForSeconds(10f);
         Destroy(sparkle);
+        active = false;
         invuln = false;
     }
 }
