@@ -168,7 +168,7 @@ MonoBehaviour:
   target: {fileID: 0}
   knockScale: 400
   m_MovementSmoothing: 0.05
-  stop: 1.5
+  stop: 0.5
 --- !u!114 &1318467802926555868
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -18,6 +18,13 @@ public class PlayerHealth : MonoBehaviour
     private bool dead = false;
     private CharacterMovement characterMov;
 
+    private void Awake()
+    {
+        invuln = false;
+        active = false;
+        shield = false;
+    }
+
     private void Start()
     {
         currentHealth = health;

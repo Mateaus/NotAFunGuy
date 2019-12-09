@@ -120,9 +120,6 @@ public class EnemyAI : MonoBehaviour
             if (!hasAttacked)
             {
                 hasAttacked = true;
-                enemyAnimator.SetBool("isMoving", false);
-                enemyAnimator.SetBool("isHitting", true);
-                target.GetComponent<PlayerHealth>().TakeDamage(attackDamage);
                 StartCoroutine(AttackTarget());
             }
             Debug.Log("Attack!");
@@ -194,7 +191,17 @@ public class EnemyAI : MonoBehaviour
 
     IEnumerator AttackTarget()
     {
-        yield return new WaitForSeconds(1.0f);
+        enemyAnimator.SetBool("isMoving", false);
+        enemyAnimator.SetBool("isHitting", true);
+        yield return new WaitForSeconds(0.5f);
+        if (Mathf.Abs(target.transform.position.x - transform.position.x) < attackRange &&
+            Mathf.Abs(target.transform.position.y - transform.position.y) < attackRange)
+        {
+            target.GetComponent<PlayerHealth>().TakeDamage(attackDamage);
+        }
+        enemyAnimator.SetBool("isMoving", true);
+        enemyAnimator.SetBool("isHitting", false);
+        yield return new WaitForSeconds(1f);
         //enemyAnimator.SetBool("isHitting", false);
         hasAttacked = false;
     }
