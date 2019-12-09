@@ -2699,7 +2699,7 @@ PrefabInstance:
     - target: {fileID: 5664620058292884640, guid: ef733d48edfa6a9429afc4dc436c898a,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 37.474457
+      value: 37.47446
       objectReference: {fileID: 0}
     - target: {fileID: 5664620058292884640, guid: ef733d48edfa6a9429afc4dc436c898a,
         type: 3}
@@ -2709,7 +2709,7 @@ PrefabInstance:
     - target: {fileID: 5664620058292884640, guid: ef733d48edfa6a9429afc4dc436c898a,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.12497169
+      value: 0.1249717
       objectReference: {fileID: 0}
     - target: {fileID: 5664620058292884640, guid: ef733d48edfa6a9429afc4dc436c898a,
         type: 3}
@@ -2769,7 +2769,7 @@ PrefabInstance:
     - target: {fileID: 5664620058292884641, guid: ef733d48edfa6a9429afc4dc436c898a,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 9
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5664620058292884641, guid: ef733d48edfa6a9429afc4dc436c898a,
         type: 3}
@@ -2781,16 +2781,41 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 5664620058292884641, guid: ef733d48edfa6a9429afc4dc436c898a,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5664620058292884641, guid: ef733d48edfa6a9429afc4dc436c898a,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5664620058292884641, guid: ef733d48edfa6a9429afc4dc436c898a,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5664620058292884641, guid: ef733d48edfa6a9429afc4dc436c898a,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 831152981823360926, guid: ef733d48edfa6a9429afc4dc436c898a,
         type: 3}
       propertyPath: health
-      value: 500
+      value: 1500
       objectReference: {fileID: 0}
     - target: {fileID: 831152981823360926, guid: ef733d48edfa6a9429afc4dc436c898a,
         type: 3}
       propertyPath: bossHealth
       value: 
       objectReference: {fileID: 1757127803}
+    - target: {fileID: 4821789805692955176, guid: ef733d48edfa6a9429afc4dc436c898a,
+        type: 3}
+      propertyPath: enemies.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4821789805692955176, guid: ef733d48edfa6a9429afc4dc436c898a,
         type: 3}
       propertyPath: mold
@@ -2813,6 +2838,18 @@ PrefabInstance:
       propertyPath: whatIsEnemies.m_Bits
       value: 768
       objectReference: {fileID: 0}
+    - target: {fileID: 4821789805692955176, guid: ef733d48edfa6a9429afc4dc436c898a,
+        type: 3}
+      propertyPath: enemies.Array.data[0]
+      value: 
+      objectReference: {fileID: 4109615643180596762, guid: c93677aa721eaee46b3e895b3ba096ab,
+        type: 3}
+    - target: {fileID: 4821789805692955176, guid: ef733d48edfa6a9429afc4dc436c898a,
+        type: 3}
+      propertyPath: enemies.Array.data[1]
+      value: 
+      objectReference: {fileID: 2812736620852288937, guid: 8d68bd1e983162747a9e67033174b13c,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef733d48edfa6a9429afc4dc436c898a, type: 3}
 --- !u!1 &1615211195
@@ -2963,7 +3000,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 311453225
   m_SortingLayer: 6
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
