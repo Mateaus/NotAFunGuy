@@ -17,7 +17,7 @@ public class EnemyMovement : MonoBehaviour
 
     Animator a;
     float speed = 2f;
-    public float stop = 1.5f;
+    public float stop = 0.5f;
 
     void Awake()
     {
@@ -79,7 +79,6 @@ public class EnemyMovement : MonoBehaviour
             if (!hasAttacked)
             {
                 hasAttacked = true;
-                a.SetBool("isHitting", true);
                 StartCoroutine(AttackTarget());
             }
         }
@@ -101,8 +100,9 @@ public class EnemyMovement : MonoBehaviour
 
     IEnumerator AttackTarget()
     {
-        yield return new WaitForSeconds(0.5f);
-        if(Mathf.Abs(target.transform.position.x - transform.position.x) < stop &&
+        yield return new WaitForSeconds(5f);
+        a.SetBool("isHitting", true);
+        if (Mathf.Abs(target.transform.position.x - transform.position.x) < stop &&
            Mathf.Abs(target.transform.position.y - transform.position.y) < stop)
         {
             target.GetComponent<PlayerHealth>().TakeDamage(1);
