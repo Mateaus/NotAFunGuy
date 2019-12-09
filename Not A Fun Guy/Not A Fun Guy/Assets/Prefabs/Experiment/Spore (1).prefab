@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4302317292567426367}
   - component: {fileID: 5205654247029619685}
   - component: {fileID: 1759098495544811188}
+  - component: {fileID: 1203432710158291363}
   m_Layer: 8
   m_Name: Spore (1)
   m_TagString: Enemy
@@ -133,7 +134,7 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4109615643180596762}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -184,6 +185,32 @@ MonoBehaviour:
     type: 3}
   Shield: {fileID: 4172851405633507968, guid: c29b4a56ce3e1304085e3ab036d052c1, type: 3}
   Invuln: {fileID: 8114450186059953711, guid: f1c0c65d4bb60bc4b94e2e39a203e73e, type: 3}
+--- !u!61 &1203432710158291363
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4109615643180596762}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: -0.18}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.36, y: 1.36}
+    newSize: {x: 0.34, y: 0.34}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &5060401312967337483
 GameObject:
   m_ObjectHideFlags: 0
