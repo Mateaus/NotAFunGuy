@@ -112,6 +112,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+<<<<<<< HEAD
 --- !u!1001 &6658641
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -332,7 +333,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7aee29a2b977d644aae33d0f8b7042a1, type: 3}
---- !u!1 &6658642
+--- !u!1 &6658642 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5012054727033889480, guid: 7aee29a2b977d644aae33d0f8b7042a1,
     type: 3}
@@ -434,7 +435,11 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+<<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!114 &6658644
+=======
+--- !u!70 &6658644
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -464,6 +469,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startHealth: 100
 --- !u!114 &6658654
+>>>>>>> origin/playerDamageScript
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -472,6 +478,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6658642}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< HEAD
   m_Script: {fileID: 11500000, guid: 0d63ac267385e0c4fb4e8d968f19473b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -483,12 +490,22 @@ MonoBehaviour:
   flashSpeed: 5
   flashColour: {r: 0.3301887, g: 0.06697223, b: 0.06697223, a: 0.1}
   invincible: 0
---- !u!4 &6658651 
+=======
+>>>>>>> origin/sounds
+=======
+  m_Script: {fileID: 11500000, guid: 7d8ec51490a4c0e4780567825819926f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+>>>>>>> origin/playerDamageScript
+||||||| merged common ancestors
+=======
+--- !u!4 &6658651 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5012054727033863912, guid: 7aee29a2b977d644aae33d0f8b7042a1,
     type: 3}
   m_PrefabInstance: {fileID: 6658641}
   m_PrefabAsset: {fileID: 0}
+>>>>>>> origin/cameraController
 --- !u!1 &18791895
 GameObject:
   m_ObjectHideFlags: 0
@@ -871,6 +888,8 @@ Transform:
   m_Father: {fileID: 1113853474}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -28.012001}
+<<<<<<< HEAD
+<<<<<<< HEAD
 --- !u!4 &193246901 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8240275148793100606, guid: 7aee29a2b977d644aae33d0f8b7042a1,
@@ -951,12 +970,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 356771955}
   m_CullTransparentMesh: 0
+=======
+>>>>>>> origin/sounds
+||||||| merged common ancestors
 --- !u!4 &193246901 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8240275148793100606, guid: 7aee29a2b977d644aae33d0f8b7042a1,
     type: 3}
   m_PrefabInstance: {fileID: 6658641}
   m_PrefabAsset: {fileID: 0}
+=======
+>>>>>>> origin/cameraController
 --- !u!1 &395774645
 GameObject:
   m_ObjectHideFlags: 0
@@ -32044,6 +32068,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+<<<<<<< HEAD
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -32068,6 +32093,18 @@ CanvasRenderer:
   m_GameObject: {fileID: 1625574595}
   m_CullTransparentMesh: 0
 --- !u!1 &1641716791
+||||||| merged common ancestors
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 6.5625, y: 5.8125}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!1 &1748354915
+=======
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -32177,6 +32214,7 @@ Transform:
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1748354915
+>>>>>>> origin/cameraController
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -32204,8 +32242,16 @@ Transform:
   m_LocalPosition: {x: 17.17, y: 3.53, z: 0}
   m_LocalScale: {x: 1.3, y: 1.3, z: 1}
   m_Children: []
+<<<<<<< HEAD
   m_Father: {fileID: 1113853474}
   m_RootOrder: 12
+||||||| merged common ancestors
+  m_Father: {fileID: 193246901}
+  m_RootOrder: 0
+=======
+  m_Father: {fileID: 6658651}
+  m_RootOrder: 0
+>>>>>>> origin/cameraController
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1641716793
 SpriteRenderer:
