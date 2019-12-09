@@ -4672,9 +4672,9 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1430995681
-  m_SortingLayer: 3
-  m_SortingOrder: 10
+  m_SortingLayerID: 311453225
+  m_SortingLayer: 6
+  m_SortingOrder: 11
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
@@ -4708,7 +4708,7 @@ GameObject:
   m_Component:
   - component: {fileID: 801786887232228705}
   m_Layer: 5
-  m_Name: Sparkle
+  m_Name: InvSpark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

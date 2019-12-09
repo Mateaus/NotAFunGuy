@@ -68,6 +68,11 @@ public class HeroAttack : MonoBehaviour
         }
     }
 
+    public void damageBoss(GameObject other)
+    {
+        other.GetComponent<BossHealth>().damage(strength);
+    }
+
     IEnumerator EnemyStun(GameObject other)
     {
         other.GetComponent<EnemyMovement>().enabled = false;
