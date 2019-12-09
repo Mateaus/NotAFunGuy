@@ -100,7 +100,8 @@ public class EnemyMovement : MonoBehaviour
     IEnumerator AttackTarget()
     {
         yield return new WaitForSeconds(0.5f);
-        if(Mathf.Abs(target.transform.position.x - transform.position.x) < stop)
+        if(Mathf.Abs(target.transform.position.x - transform.position.x) < stop &&
+           Mathf.Abs(target.transform.position.y - transform.position.y) < stop)
         {
             target.GetComponent<PlayerHealth>().TakeDamage(1);
         }
