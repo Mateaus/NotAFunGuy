@@ -10,6 +10,7 @@ public class PlayerHealth : MonoBehaviour
     public static bool invuln = false;
     private static bool active = false;
     public static bool shield = false;
+    public Image shieldSprite;
     public Image healthBar;
     public GameObject invEffect;
 
@@ -19,10 +20,23 @@ public class PlayerHealth : MonoBehaviour
 
     private void Update() {
         Debug.Log("Hero HP: " + health);
+        if (shield)
+        {
+            shieldSprite.enabled = true;
+        }
+        else
+        {
+            shieldSprite.enabled = false;
+        }
     }
 
     public void TakeDamage(int damage) 
     {
+        if (shield)
+        {
+            shield = false;
+            return;
+        }
         health -= damage;
 
         if (healthBar != null)
