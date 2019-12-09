@@ -5,28 +5,28 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-    private Transform target;
+    public Transform target;
     private Rigidbody2D m_Rigidbody2D;
     private Vector3 m_Velocity = Vector3.zero;
+    private float attackCoolDown = 0.0f;
+    private bool hasAttacked = false;
 
 
     [Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .05f;
 
     Animator a;
     float speed = 2f;
-    float stop = 1.5f;
+    public float stop = 1.5f;
 
     void Awake()
     {
         m_Rigidbody2D = GetComponent<Rigidbody2D>();
-        target = GameObject.FindGameObjectWithTag("Player").transform;
         a = GetComponent<Animator>();
     }
 
     private void Update()
     {
         enemyDirection();
-       
     }
 
 
@@ -69,6 +69,18 @@ public class EnemyMovement : MonoBehaviour
             //Play attack animation
             attack = true;
             move = false;
+
+
+            // Cooldown attack happens here. I need to refactor this script
+            // and docouple each action of the enemy to easily implement
+            // new things.
+            if (!hasAttacked)
+            {
+                hasAttacked = true;
+                a.SetBool("isHitting", true);
+                target.GetComponent<PlayerHealth>().TakeDamage(1);
+                StartCoroutine(AttackTarget());
+            }
         }
         else
         {
@@ -82,9 +94,14 @@ public class EnemyMovement : MonoBehaviour
         }
 
         //print("Moving  " + move + "Attack  " + attack);
-        a.SetBool("isHitting", attack);
+        //a.SetBool("isHitting", attack);
         a.SetBool("isMoving", move);
+    }
 
-
+    IEnumerator AttackTarget()
+    {
+        yield return new WaitForSeconds(1);
+        a.SetBool("isHitting", false);
+        hasAttacked = false;
     }
 }
