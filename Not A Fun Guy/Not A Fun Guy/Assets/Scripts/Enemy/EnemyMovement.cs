@@ -9,6 +9,7 @@ public class EnemyMovement : MonoBehaviour
     private Rigidbody2D m_Rigidbody2D;
     private Vector3 m_Velocity = Vector3.zero;
     private float attackCoolDown = 0.0f;
+    public float knockScale;
     private bool hasAttacked = false;
 
 
@@ -104,6 +105,16 @@ public class EnemyMovement : MonoBehaviour
            Mathf.Abs(target.transform.position.y - transform.position.y) < stop)
         {
             target.GetComponent<PlayerHealth>().TakeDamage(1);
+            if(target.transform.position.x > transform.position.x)
+            {
+                Vector2 knock = new Vector2(1, 1);
+                target.GetComponent<Rigidbody2D>().AddForce(knock * knockScale);
+            }
+            else
+            {
+                Vector2 knock = new Vector2(-1, 1);
+                target.GetComponent<Rigidbody2D>().AddForce(knock * knockScale);
+            }
         }
         yield return new WaitForSeconds(1f);
         a.SetBool("isHitting", false);
