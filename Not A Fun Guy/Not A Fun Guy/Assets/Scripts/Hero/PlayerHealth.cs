@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class PlayerHealth : MonoBehaviour
     public Image shieldSprite;
     public Image healthBar;
     public GameObject invEffect;
+    public Animator animator;
 
     private void Start() {
         currentHealth = health;
@@ -36,7 +38,7 @@ public class PlayerHealth : MonoBehaviour
         }
         if(health <= 0)
         {
-            Debug.Log("Dead");
+            StartCoroutine("Die");
         }
     }
 
@@ -62,6 +64,13 @@ public class PlayerHealth : MonoBehaviour
     private void OnDeath()
     {
         
+    }
+
+    IEnumerator Die()
+    {
+        animator.SetBool("Dead", true);
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     IEnumerator Inv()
