@@ -296,6 +296,7 @@ PrefabInstance:
       propertyPath: character
       value: 
       objectReference: {fileID: 6658642}
+<<<<<<< HEAD
     - target: {fileID: 5012054727022630698, guid: 7aee29a2b977d644aae33d0f8b7042a1,
         type: 3}
       propertyPath: m_Enabled
@@ -311,6 +312,8 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+||||||| merged common ancestors
+=======
     - target: {fileID: 5012054727022630698, guid: 7aee29a2b977d644aae33d0f8b7042a1,
         type: 3}
       propertyPath: xMin
@@ -331,6 +334,7 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+>>>>>>> origin/cameraController
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7aee29a2b977d644aae33d0f8b7042a1, type: 3}
 --- !u!1 &6658642 stripped
