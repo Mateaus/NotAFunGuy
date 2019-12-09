@@ -8,11 +8,13 @@ public class EnemyHealth : MonoBehaviour
     public GameObject AttackUp;
     public GameObject Shield;
     public GameObject Invuln;
+    private AudioSource source;
+    public AudioClip hit;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        source = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -26,6 +28,7 @@ public class EnemyHealth : MonoBehaviour
 
     public void damage(int val)
     {
+        source.PlayOneShot(hit);
         health -= val;
     }
 

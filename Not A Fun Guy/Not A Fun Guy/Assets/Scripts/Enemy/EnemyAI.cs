@@ -28,9 +28,12 @@ public class EnemyAI : MonoBehaviour
     public float colliderRangeY;
     private Vector2 targetPosition = Vector2.zero;
     private float cooldownSearch = 0.0f;
+    public AudioSource source;
+    public AudioClip attack;
 
     private void Start()
     {
+        source = GetComponent<AudioSource>();
         m_Rigidbody2D = GetComponent<Rigidbody2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         enemyAnimator = GetComponent<Animator>();
@@ -191,9 +194,10 @@ public class EnemyAI : MonoBehaviour
 
     IEnumerator AttackTarget()
     {
+        yield return new WaitForSeconds(0.5f);
         enemyAnimator.SetBool("isMoving", false);
         enemyAnimator.SetBool("isHitting", true);
-        yield return new WaitForSeconds(0.5f);
+        source.PlayOneShot(attack);
         if (Mathf.Abs(target.transform.position.x - transform.position.x) < attackRange &&
             Mathf.Abs(target.transform.position.y - transform.position.y) < attackRange)
         {
