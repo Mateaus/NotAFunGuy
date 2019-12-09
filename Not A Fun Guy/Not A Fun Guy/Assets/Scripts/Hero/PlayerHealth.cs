@@ -17,6 +17,7 @@ public class PlayerHealth : MonoBehaviour
     public Animator animator;
     private bool dead = false;
     private CharacterMovement characterMov;
+    private SpriteRenderer renderer;
 
     private void Awake()
     {
@@ -29,6 +30,7 @@ public class PlayerHealth : MonoBehaviour
     {
         currentHealth = health;
         characterMov = GetComponent<CharacterMovement>();
+        renderer = GetComponent<SpriteRenderer>();
     }
 
     private void Update()
@@ -76,6 +78,18 @@ public class PlayerHealth : MonoBehaviour
         if (healthBar != null)
         {
             healthBar.fillAmount = health / currentHealth;
+        }
+        StartCoroutine("Flasher");
+    }
+
+    IEnumerator Flasher()
+    {
+        for (int i = 0; i < 5; i++)
+        {
+            renderer.material.color = Color.red;
+            yield return new WaitForSeconds(.1f);
+            renderer.material.color = Color.white;
+            yield return new WaitForSeconds(.1f);
         }
     }
 
