@@ -75,8 +75,10 @@ public class HeroAttack : MonoBehaviour
 
     IEnumerator EnemyStun(GameObject other)
     {
+        if (other != null)
         other.GetComponent<EnemyMovement>().enabled = false;
         yield return new WaitForSeconds(0.5f);
+        if (other != null)
         other.GetComponent<EnemyMovement>().enabled = true;
     }
 
