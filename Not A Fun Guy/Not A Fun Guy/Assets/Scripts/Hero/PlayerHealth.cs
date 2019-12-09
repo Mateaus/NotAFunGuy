@@ -6,8 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public static int health = 10;
-    private static float currentHealth;
+    public int health = 10;
+    private float currentHealth;
     public static bool invuln = false;
     private static bool active = false;
     public static bool shield = false;
