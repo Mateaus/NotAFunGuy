@@ -9,11 +9,14 @@ public class BossHealth : MonoBehaviour
     public Image bossHealth;
     public int health;
     private float currentHealth;
+    private AudioSource source;
+    public AudioClip hit;
 
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = health;
+        source = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -28,6 +31,7 @@ public class BossHealth : MonoBehaviour
     public void damage(int val)
     {
         health -= val;
+        source.PlayOneShot(hit);
 
         if (bossHealth != null)
         {
