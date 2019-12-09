@@ -1,23 +1,42 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int health;
+    public int health = 10;
+    private float currentHealth;
     public static bool invuln = false;
     private static bool active = false;
     public static bool shield = false;
+    public Image healthBar;
     public GameObject invEffect;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    private void Start() {
+        currentHealth = health;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update() {
+        Debug.Log("Hero HP: " + health);
+    }
+
+    public void TakeDamage(int damage) 
+    {
+        health -= damage;
+
+        if (healthBar != null)
+        {
+            healthBar.fillAmount = health / currentHealth;
+        }
+
+        if (health <= 0)
+        {
+            OnDeath();
+        }
+    }
+
+    private void OnDeath()
     {
         if (invuln && !active)
         {
