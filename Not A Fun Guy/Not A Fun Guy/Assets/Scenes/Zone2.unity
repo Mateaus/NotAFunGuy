@@ -337,75 +337,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &127601687
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 127601689}
-  - component: {fileID: 127601688}
-  m_Layer: 9
-  m_Name: Point Light
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!108 &127601688
-Light:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 127601687}
-  m_Enabled: 1
-  serializedVersion: 8
-  m_Type: 2
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 2
-  m_Range: 0
-  m_SpotAngle: 30
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 0
-    m_Resolution: -1
-    m_CustomResolution: -1
-    m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_Lightmapping: 4
-  m_LightShadowCasterMode: 0
-  m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
---- !u!4 &127601689
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 127601687}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -4}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 676897710}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &208185403
 GameObject:
   m_ObjectHideFlags: 0
@@ -18627,6 +18558,16 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 77e522fdf6e42f444a0ad74f84340545, type: 2}
+    - target: {fileID: 2587285872909955406, guid: b564a74dadc714649a19c847a64f5132,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2587285872909955406, guid: b564a74dadc714649a19c847a64f5132,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 02196f3f82d7b4c488540ce316cfc057, type: 3}
     - target: {fileID: 1654535307000260236, guid: b564a74dadc714649a19c847a64f5132,
         type: 3}
       propertyPath: m_Enabled
@@ -18642,26 +18583,20 @@ PrefabInstance:
       propertyPath: shieldSprite
       value: 
       objectReference: {fileID: 868804381}
-    - target: {fileID: 2587285872909955406, guid: b564a74dadc714649a19c847a64f5132,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2587285872909955406, guid: b564a74dadc714649a19c847a64f5132,
-        type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: 02196f3f82d7b4c488540ce316cfc057, type: 3}
     - target: {fileID: 4189849666214484578, guid: b564a74dadc714649a19c847a64f5132,
         type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1660497787, guid: b564a74dadc714649a19c847a64f5132, type: 3}
+      propertyPath: m_Range
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b564a74dadc714649a19c847a64f5132, type: 3}
---- !u!4 &676897710 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7379578942245867428, guid: b564a74dadc714649a19c847a64f5132,
+--- !u!108 &676897710 stripped
+Light:
+  m_CorrespondingSourceObject: {fileID: 1660497787, guid: b564a74dadc714649a19c847a64f5132,
     type: 3}
   m_PrefabInstance: {fileID: 676897709}
   m_PrefabAsset: {fileID: 0}
@@ -19089,7 +19024,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 915dd4a4db2143449af8022717eb5e03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transitionAnim: {fileID: 0}
+  transitionAnim: {fileID: 1922839544}
   sceneName: Zone3
 --- !u!1 &942853004
 GameObject:
@@ -19799,7 +19734,7 @@ PrefabInstance:
         type: 3}
       propertyPath: smallLightSource
       value: 
-      objectReference: {fileID: 127601688}
+      objectReference: {fileID: 676897710}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87927fda4180ab2479e130cb678e2744, type: 3}
 --- !u!4 &1688123717 stripped
@@ -20249,6 +20184,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 646484572221390772, guid: 63f8e55fba3419e429d5746c13ab1372,
     type: 3}
   m_PrefabInstance: {fileID: 1913008837}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1922839544 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 8973124050362320099, guid: eb7b253cf03f4744485954c9f21ca33e,
+    type: 3}
+  m_PrefabInstance: {fileID: 2039818960}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2008570348
 PrefabInstance:
