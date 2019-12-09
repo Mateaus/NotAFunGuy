@@ -15,6 +15,7 @@ public class PlayerHealth : MonoBehaviour
     public Image healthBar;
     public GameObject invEffect;
     public Animator animator;
+    private bool dead = false;
 
     private void Start() {
         currentHealth = health;
@@ -36,8 +37,9 @@ public class PlayerHealth : MonoBehaviour
             active = true;
             StartCoroutine("Inv");
         }
-        if(health <= 0)
+        if(health <= 0 && !dead)
         {
+            dead = true;
             StartCoroutine("Die");
         }
     }
@@ -69,6 +71,7 @@ public class PlayerHealth : MonoBehaviour
     IEnumerator Die()
     {
         animator.SetBool("Dead", true);
+        GetComponent<CharacterMovement>().death();
         yield return new WaitForSeconds(2f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }

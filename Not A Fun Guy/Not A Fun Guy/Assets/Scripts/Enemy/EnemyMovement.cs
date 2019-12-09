@@ -105,7 +105,7 @@ public class EnemyMovement : MonoBehaviour
            Mathf.Abs(target.transform.position.y - transform.position.y) < stop)
         {
             target.GetComponent<PlayerHealth>().TakeDamage(1);
-            if(target.transform.position.x > transform.position.x)
+            /*if(target.transform.position.x > transform.position.x)
             {
                 Vector2 knock = new Vector2(1, 1);
                 target.GetComponent<Rigidbody2D>().AddForce(knock * knockScale);
@@ -114,7 +114,7 @@ public class EnemyMovement : MonoBehaviour
             {
                 Vector2 knock = new Vector2(-1, 1);
                 target.GetComponent<Rigidbody2D>().AddForce(knock * knockScale);
-            }
+            }*/
         }
         yield return new WaitForSeconds(1f);
         a.SetBool("isHitting", false);
