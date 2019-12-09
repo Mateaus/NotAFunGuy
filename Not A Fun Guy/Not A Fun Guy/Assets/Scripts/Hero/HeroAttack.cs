@@ -16,7 +16,8 @@ public class HeroAttack : MonoBehaviour
     private float timeBtwAttack = 0.0f;
 
     public Transform attackPos;
-    public float attackRange;
+    public float attackRangeX;
+    public float attackRangeY;
     public LayerMask whatIsEnemies;
     public float startTimeBetweenAttacks = 0.0f;
 
@@ -36,7 +37,7 @@ public class HeroAttack : MonoBehaviour
             {
                 source.PlayOneShot(attack);
                 GetComponent<Animator>().SetTrigger("Attk");
-                Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
+                Collider2D[] enemiesToDamage = Physics2D.OverlapBoxAll(attackPos.position, new Vector2(attackRangeX, attackRangeY), 0, whatIsEnemies);
                 for (int i = 0; i < enemiesToDamage.Length; i++)
                 {
                     GameObject enemyGO = enemiesToDamage[i].gameObject;
@@ -95,9 +96,11 @@ public class HeroAttack : MonoBehaviour
         {
             knock = new Vector2(-1, 0.4f);
         }
+        
+        other.GetComponent<EnemyAI>().StunEnemy();
         enemyHP.damage(strength);
         enemyRB.AddForce(knock * knockScale);
-        other.GetComponent<EnemyAI>()._StunEnemy();
+        //other.GetComponent<EnemyAI>()._StunEnemy();
         //StartCoroutine(EnemyStun(other));
 
         // other.GetComponent<EnemyHealth>().damage(strength);
@@ -155,6 +158,6 @@ public class HeroAttack : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(attackPos.position, attackRange);
+        Gizmos.DrawWireCube(attackPos.position, new Vector3(attackRangeX, attackRangeY, 1));
     }
 }

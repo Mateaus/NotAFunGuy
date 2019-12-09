@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1186529484}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.581, y: 0, z: 0}
+  m_LocalPosition: {x: 0.457, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7379578942245867428}
@@ -354,7 +354,8 @@ MonoBehaviour:
   atkEffect: {fileID: 6683618846143924843, guid: 6004207c53ef8d94f8c9a5e01b987ca8,
     type: 3}
   attackPos: {fileID: 1186529485}
-  attackRange: 1
+  attackRangeX: 0
+  attackRangeY: 0
   whatIsEnemies:
     serializedVersion: 2
     m_Bits: 256

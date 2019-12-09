@@ -1642,6 +1642,11 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 10789bd7dfddabc46a7af0b8d04fff0b, type: 3}
+    - target: {fileID: 2587285872909955406, guid: b564a74dadc714649a19c847a64f5132,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 7379578942251472230, guid: b564a74dadc714649a19c847a64f5132,
         type: 3}
       propertyPath: m_Material
@@ -1691,6 +1696,21 @@ PrefabInstance:
         type: 3}
       propertyPath: knockScale
       value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 9215386626938572695, guid: b564a74dadc714649a19c847a64f5132,
+        type: 3}
+      propertyPath: attackRangeX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9215386626938572695, guid: b564a74dadc714649a19c847a64f5132,
+        type: 3}
+      propertyPath: attackRangeY
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4189849666214484578, guid: b564a74dadc714649a19c847a64f5132,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 5446243233634061522, guid: b564a74dadc714649a19c847a64f5132,
         type: 3}
@@ -2673,6 +2693,18 @@ PrefabInstance:
       propertyPath: health
       value: 500
       objectReference: {fileID: 0}
+    - target: {fileID: 4821789805692955176, guid: ef733d48edfa6a9429afc4dc436c898a,
+        type: 3}
+      propertyPath: mold
+      value: 
+      objectReference: {fileID: 2812736620852288937, guid: 8d68bd1e983162747a9e67033174b13c,
+        type: 3}
+    - target: {fileID: 4821789805692955176, guid: ef733d48edfa6a9429afc4dc436c898a,
+        type: 3}
+      propertyPath: shroom
+      value: 
+      objectReference: {fileID: 4109615643180596762, guid: c93677aa721eaee46b3e895b3ba096ab,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef733d48edfa6a9429afc4dc436c898a, type: 3}
 --- !u!1 &1617707987

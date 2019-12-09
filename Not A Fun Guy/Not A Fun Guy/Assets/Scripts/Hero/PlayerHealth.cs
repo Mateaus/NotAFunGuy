@@ -16,12 +16,16 @@ public class PlayerHealth : MonoBehaviour
     public GameObject invEffect;
     public Animator animator;
     private bool dead = false;
+    private CharacterMovement characterMov;
 
-    private void Start() {
+    private void Start()
+    {
         currentHealth = health;
+        characterMov = GetComponent<CharacterMovement>();
     }
 
-    private void Update() {
+    private void Update()
+    {
         //Debug.Log("Hero HP: " + health);
         if (shield)
         {
@@ -37,14 +41,19 @@ public class PlayerHealth : MonoBehaviour
             active = true;
             StartCoroutine("Inv");
         }
-        if(health <= 0 && !dead)
+        if (health <= 0 && !dead)
         {
             dead = true;
-            StartCoroutine("Die");
+            StartCoroutine(Die());
+        }
+        if (transform.position.y <= -50)
+        {
+            dead = true;
+            StartCoroutine(Die());
         }
     }
 
-    public void TakeDamage(int damage) 
+    public void TakeDamage(int damage)
     {
         if (invuln)
         {
@@ -65,13 +74,14 @@ public class PlayerHealth : MonoBehaviour
 
     private void OnDeath()
     {
-        
+
     }
 
     IEnumerator Die()
     {
         animator.SetBool("Dead", true);
-        GetComponent<CharacterMovement>().death();
+        
+        characterMov.death();
         yield return new WaitForSeconds(2f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
