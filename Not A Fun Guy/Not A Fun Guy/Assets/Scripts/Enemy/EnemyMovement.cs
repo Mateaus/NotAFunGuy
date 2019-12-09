@@ -78,7 +78,6 @@ public class EnemyMovement : MonoBehaviour
             {
                 hasAttacked = true;
                 a.SetBool("isHitting", true);
-                target.GetComponent<PlayerHealth>().TakeDamage(1);
                 StartCoroutine(AttackTarget());
             }
         }
@@ -100,7 +99,12 @@ public class EnemyMovement : MonoBehaviour
 
     IEnumerator AttackTarget()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.5f);
+        if(Mathf.Abs(target.transform.position.x - transform.position.x) < stop)
+        {
+            target.GetComponent<PlayerHealth>().TakeDamage(1);
+        }
+        yield return new WaitForSeconds(1f);
         a.SetBool("isHitting", false);
         hasAttacked = false;
     }
