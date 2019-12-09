@@ -60,14 +60,12 @@ public class EnemyAI : MonoBehaviour
             {
                 if (idleDuration <= 0)
                 {
-                    Debug.Log("CHANGING VALUES");
                     randomXValue = Random.Range(-5, 5);
                     scoutDuration = Random.Range(0, 5);
                     idleDuration = Random.Range(0, 3);
                 }
                 else
                 {
-                    Debug.Log("Resting!");
                     enemyAnimator.SetBool("isMoving", false);
                     enemyAnimator.SetBool("isHitting", false);
                     transform.position = Vector2.MoveTowards(transform.position, transform.position, currentMovementSpeed * Time.deltaTime);
@@ -76,15 +74,12 @@ public class EnemyAI : MonoBehaviour
             }
             else
             {
-                Debug.Log("MOVING!");
                 Collider2D[] leftBlockages = Physics2D.OverlapBoxAll(colliderPositionLeft.position, new Vector2(colliderRangeX, colliderRangeY), 0, whatIsEnemies);
                 for (int i = 0; i < leftBlockages.Length; i++)
                 {
                     GameObject enemyGO = leftBlockages[i].gameObject;
                     if (enemyGO.tag == "Ground" || enemyGO.tag == "Enemy")
                     {
-                        Debug.Log(randomXValue);
-                        Debug.Log("Value founded");
                         randomXValue = -randomXValue;
                     }
                 }
@@ -95,8 +90,6 @@ public class EnemyAI : MonoBehaviour
                     GameObject enemyGO = rightBlockages[i].gameObject;
                     if (enemyGO.tag == "Ground" || enemyGO.tag == "Enemy")
                     {
-                        Debug.Log(randomXValue);
-                        Debug.Log("Value founded");
                         randomXValue = -randomXValue;
                     }
                 }
@@ -122,7 +115,7 @@ public class EnemyAI : MonoBehaviour
                 hasAttacked = true;
                 StartCoroutine(AttackTarget());
             }
-            Debug.Log("Attack!");
+            
             spriteRenderer.flipX = TargetDirection();
         }
 
@@ -140,7 +133,6 @@ public class EnemyAI : MonoBehaviour
             {
                 correctDirection = false;
                 awayDuration = 1.5f;
-                Debug.Log("Collided with left wall");
                 targetPosition = new Vector2(transform.position.x + 1, transform.position.y);
                 isFound = true;
             }
@@ -154,7 +146,6 @@ public class EnemyAI : MonoBehaviour
             {
                 correctDirection = false;
                 awayDuration = 1.5f;
-                Debug.Log("Collided with right wall");
                 targetPosition = new Vector2(transform.position.x - 1, transform.position.y);
                 isFound = true;
             }
