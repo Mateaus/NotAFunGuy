@@ -11,5 +11,5 @@ Not A Fun Guy is a 2D game where the protagonist embarks into an adventure with 
 - Red Spores: Double Attack
 - Yellow Spores: Invulnerability
 
-# Resoruces:
+# Resources:
 https://rvros.itch.io/animated-pixel-hero
